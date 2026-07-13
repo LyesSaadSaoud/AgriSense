@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "AgriSense Algorithms"
+message: "Please cite the AgriSense paper when using this software."
+type: software
+authors:
+  - family-names: "Saad Saoud"
+    given-names: "Lyes"
+version: "0.1.0"
+date-released: "2026-07-13"
+repository-code: "https://github.com/USERNAME/AgriSense"
+license: "LicenseRef-Proprietary-Pending"

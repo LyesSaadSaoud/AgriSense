@@ -1,0 +1,12 @@
+{
+  "dataset_root": "/path/to/dataset",
+  "train_csv": "/path/to/train.csv",
+  "val_csv": "/path/to/val.csv",
+  "output_dir": "outputs/experiment_01",
+  "seed": 42,
+  "batch_size": 16,
+  "epochs": 50,
+  "learning_rate": 0.0001,
+  "num_workers": 4,
+  "notes": "Adapt command-line flags to the uploaded scripts."
+}

@@ -2,629 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta
-    name="description"
-    content="AgriSense: a digital-twin-driven vision-language decision-to-action framework for GNSS-denied robotic greenhouse autonomy."
-  >
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AgriSense: digital-twin-driven VLA framework for GNSS-denied robotic greenhouse autonomy.">
   <meta property="og:title" content="AgriSense">
-  <meta
-    property="og:description"
-    content="Digital-twin-driven greenhouse autonomy with GNSS-denied navigation, multimodal decision-making, and plant-level robotic intervention."
-  >
-  <meta property="og:image" content="assets/images/system_pipeline.png">
-  <meta property="og:type" content="website">
-
-  <meta name="theme-color" content="#07140f">
-
-  <title>AgriSense — Digital-Twin-Driven Greenhouse Autonomy</title>
-
-  <link
-    rel="icon"
-    href="assets/images/favicon.svg"
-    type="image/svg+xml"
-  >
+  <meta property="og:description" content="Isaac Sim digital twin, GNSS-denied navigation, multimodal decision-making, and plant-level intervention.">
+  <meta property="og:image" content="assets/images/updated/system_pipeline.png">
+  <title>AgriSense — Greenhouse Autonomy</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <div class="noise" aria-hidden="true"></div>
-
-  <!-- =====================================================
-       Header
-  ====================================================== -->
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="AgriSense home">
-      <span class="brand-mark">A</span>
-      <span>AgriSense</span>
-    </a>
-
-    <button
-      class="menu-button"
-      id="menuButton"
-      aria-expanded="false"
-      aria-controls="siteNav"
-    >
-      Menu
-    </button>
-
-    <nav id="siteNav" aria-label="Main navigation">
-      <a href="#overview">Overview</a>
-      <a href="#missions">Missions</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#results">Results</a>
-      <a href="#software">Software</a>
-      <a
-        class="nav-cta"
-        href="https://github.com/LyesSaadSaoud/AgriSense"
-        target="_blank"
-        rel="noreferrer"
-      >
-        GitHub
-      </a>
-    </nav>
-  </header>
-
-  <main id="top">
-
-    <!-- =====================================================
-         Hero
-    ====================================================== -->
-    <section class="hero">
-      <img
-        class="hero-image"
-        src="assets/images/digital_twin_samples.png"
-        alt="Representative RGB observations from the AgriSense greenhouse digital twin"
-      >
-
-      <div class="hero-shade"></div>
-
-      <div class="hero-content reveal">
-        <p class="kicker">
-          Digital twin · GNSS-denied navigation · Vision-language
-          decision-to-action
-        </p>
-
-        <h1>
-          Spatially grounded<br>
-          <em>greenhouse autonomy.</em>
-        </h1>
-
-        <p class="hero-copy">
-          AgriSense combines a high-fidelity Isaac Sim greenhouse,
-          quadruped mobile manipulation, LiDAR–IMU localization,
-          multimodal decision-making, zone-level monitoring, and
-          targeted plant-level intervention.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#missions">
-            Watch inspection missions
-          </a>
-
-          <a
-            class="button ghost"
-            href="https://github.com/LyesSaadSaoud/AgriSense"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore repository
-          </a>
-        </div>
-      </div>
-
-      <div class="scroll-cue">
-        Scroll to explore <span>↓</span>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Overview
-    ====================================================== -->
-    <section id="overview" class="section intro">
-      <div class="section-label">Project overview</div>
-
-      <div class="intro-grid">
-        <div class="reveal">
-          <h2>
-            From greenhouse observation<br>
-            to validated robotic action.
-          </h2>
-        </div>
-
-        <div class="intro-copy reveal">
-          <p>
-            AgriSense is an embodied autonomy framework for greenhouse
-            inspection under GNSS-denied conditions. The robot acquires
-            RGB, LiDAR, IMU, and environmental observations while
-            navigating a structured digital-twin greenhouse.
-          </p>
-
-          <p>
-            A vision-language decision-to-action module generates
-            structured navigation, environmental-control, and
-            intervention proposals. These proposals are validated for
-            confidence, freshness, feasibility, localization
-            consistency, and manipulator reachability before execution.
-          </p>
-        </div>
-      </div>
-
-      <div class="feature-canvas reveal">
-        <img
-          src="assets/images/system_pipeline.png"
-          alt="Updated AgriSense system-level pipeline"
-        >
-
-        <div class="hotspot hs-1">
-          <span>01</span>
-          <b>Multimodal sensing</b>
-        </div>
-
-        <div class="hotspot hs-2">
-          <span>02</span>
-          <b>GNSS-denied grounding</b>
-        </div>
-
-        <div class="hotspot hs-3">
-          <span>03</span>
-          <b>Validated action</b>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Mission videos
-    ====================================================== -->
-    <section id="missions" class="section missions">
-      <div class="section-heading reveal">
-        <div>
-          <div class="section-label">Inspection recordings</div>
-
-          <h2>
-            Three missions.<br>
-            One embodied autonomy stack.
-          </h2>
-        </div>
-
-        <p>
-          Recorded greenhouse inspection missions showing robot
-          navigation, LiDAR–inertial localization, environmental
-          monitoring, and mission-level execution.
-        </p>
-      </div>
-
-      <div class="video-grid">
-
-        <!-- Zone 2 -->
-        <article class="mission-card reveal">
-          <div class="video-shell">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="assets/images/poster_zone2.webp"
-              aria-label="Zone 2 inspection mission"
-            >
-              <source
-                src="assets/videos/inspect_zone2.webm"
-                type="video/webm"
-              >
-              Your browser does not support WebM video playback.
-            </video>
-          </div>
-
-          <div class="mission-meta">
-            <span>Mission 01</span>
-            <h3>Zone 2 Inspection</h3>
-
-            <p>
-              A focused inspection of Zone 2 combining localized robot
-              navigation, environmental sensing, and route execution.
-            </p>
-          </div>
-        </article>
-
-        <!-- All zones -->
-        <article class="mission-card featured reveal">
-          <div class="video-shell">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="assets/images/poster_allzones.webp"
-              aria-label="All-Zone inspection mission"
-            >
-              <source
-                src="assets/videos/inspect_allzones.webm"
-                type="video/webm"
-              >
-              Your browser does not support WebM video playback.
-            </video>
-          </div>
-
-          <div class="mission-meta">
-            <span>Mission 02</span>
-            <h3>All-Zone Inspection</h3>
-
-            <p>
-              Complete greenhouse traversal across all four management
-              zones with continuous localization and environmental
-              logging.
-            </p>
-          </div>
-        </article>
-
-        <!-- Zone 4 -->
-        <article class="mission-card reveal">
-          <div class="video-shell">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="assets/images/poster_zone4.webp"
-              aria-label="Zone 4 inspection mission"
-            >
-              <source
-                src="assets/videos/inspect_zone4.webm"
-                type="video/webm"
-              >
-              Your browser does not support WebM video playback.
-            </video>
-          </div>
-
-          <div class="mission-meta">
-            <span>Mission 03</span>
-            <h3>Zone 4 Inspection</h3>
-
-            <p>
-              A targeted Zone 4 mission with environmental-state
-              monitoring and LiDAR–IMU localization feedback.
-            </p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Architecture
-    ====================================================== -->
-    <section id="architecture" class="section capabilities">
-      <div class="section-label">System architecture</div>
-
-      <div class="capability-list">
-
-        <article class="capability reveal">
-          <div class="capability-index">01</div>
-
-          <div>
-            <h3>High-fidelity greenhouse digital twin</h3>
-
-            <p>
-              A structured Isaac Sim environment containing greenhouse
-              geometry, cultivation beds, crop rows, inspection
-              corridors, robot-view sensing, and environmental context.
-            </p>
-          </div>
-
-          <img
-            src="assets/images/digital_twin_samples.png"
-            alt="Representative RGB samples from the updated greenhouse digital twin"
-          >
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">02</div>
-
-          <div>
-            <h3>Vision-language decision-to-action</h3>
-
-            <p>
-              User instructions, RGB observations, greenhouse sensor
-              states, and robot spatial context are fused to produce
-              structured task, zone, setpoint, and intervention
-              proposals.
-            </p>
-          </div>
-
-          <img
-            src="assets/images/system_pipeline.png"
-            alt="Vision-language decision-to-action pipeline"
-          >
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">03</div>
-
-          <div>
-            <h3>GNSS-denied spatial grounding</h3>
-
-            <p>
-              LiDAR and IMU observations support local odometry, map
-              construction, zone association, and physically consistent
-              robot localization without GNSS.
-            </p>
-          </div>
-
-          <img
-            src="assets/images/spatial_grounding.png"
-            alt="GNSS-denied spatial grounding pipeline"
-          >
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">04</div>
-
-          <div>
-            <h3>Plant-level robotic intervention</h3>
-
-            <p>
-              Zone-level decisions are refined into plant-level
-              inspection and targeted manipulator actions after safety
-              and reachability validation.
-            </p>
-          </div>
-
-          <img
-            src="assets/images/plant_level.jpeg"
-            alt="Plant-level robotic inspection and targeted intervention"
-          >
-        </article>
-
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Spatial awareness
-    ====================================================== -->
-    <section class="split-story section">
-      <div class="story-image reveal">
-        <img
-          src="assets/images/digital_twin_overlay.png"
-          alt="Local greenhouse digital-twin overlay and robot spatial context"
-        >
-      </div>
-
-      <div class="story-copy reveal">
-        <div class="section-label">Spatial awareness</div>
-
-        <h2>
-          Semantic decisions remain tied to physical space.
-        </h2>
-
-        <p>
-          Robot observations are associated with a local pose, map, and
-          greenhouse zone. This spatial grounding allows the autonomy
-          stack to connect a semantic instruction to a reproducible
-          physical inspection or intervention target.
-        </p>
-
-        <a
-          class="text-link"
-          href="https://github.com/LyesSaadSaoud/AgriSense"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Inspect repository structure →
-        </a>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Results
-    ====================================================== -->
-    <section id="results" class="section gallery">
-      <div class="section-heading reveal">
-        <div>
-          <div class="section-label">Experimental evidence</div>
-
-          <h2>
-            Navigation, mapping, monitoring,<br>
-            and intervention.
-          </h2>
-        </div>
-
-        <p>
-          Updated visual outputs from the manuscript and supplementary
-          evaluation package.
-        </p>
-      </div>
-
-      <div class="gallery-grid reveal">
-        <figure class="g-wide">
-          <img
-            src="assets/images/navigation_results.png"
-            alt="Updated GNSS-denied navigation and localization results"
-          >
-        </figure>
-
-        <figure>
-          <img
-            src="assets/images/robot_perception.png"
-            alt="Robot-view perception and local environmental context"
-          >
-        </figure>
-
-        <figure>
-          <img
-            src="assets/images/supervision_interface.png"
-            alt="Updated remote supervision interface"
-          >
-        </figure>
-
-        <figure>
-          <img
-            src="assets/images/pointcloud_allzones.png"
-            alt="All-Zone LiDAR point-cloud reconstruction"
-          >
-        </figure>
-
-        <figure>
-          <img
-            src="assets/images/qualitative_views.png"
-            alt="Qualitative greenhouse inspection views"
-          >
-        </figure>
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Software and data
-    ====================================================== -->
-    <section id="software" class="section capabilities">
-      <div class="section-label">Software and reproducibility</div>
-
-      <div class="intro-grid">
-        <div class="reveal">
-          <h2>
-            Code, training, evaluation,<br>
-            and dataset organization.
-          </h2>
-        </div>
-
-        <div class="intro-copy reveal">
-          <p>
-            The repository is organized to expose the complete research
-            workflow rather than only the project webpage. It includes
-            model components, training and evaluation scripts,
-            configuration files, digital-twin integration resources,
-            and reproducibility documentation.
-          </p>
-
-          <p>
-            The associated AgriSense dataset is currently maintained in
-            a private Hugging Face repository during peer review. The
-            public dataset link will be added following acceptance.
-          </p>
-        </div>
-      </div>
-
-      <div class="capability-list">
-
-        <article class="capability reveal">
-          <div class="capability-index">01</div>
-
-          <div>
-            <h3>Model implementation</h3>
-
-            <p>
-              Vision, language, and greenhouse-state encoders; multimodal
-              fusion; setpoint regression; target-zone classification;
-              and pesticide-decision prediction.
-            </p>
-
-            <p><code>src/models/</code></p>
-          </div>
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">02</div>
-
-          <div>
-            <h3>Training pipeline</h3>
-
-            <p>
-              Dataset loading, configuration management, multimodal
-              training, checkpoint selection, and experiment logging.
-            </p>
-
-            <p><code>scripts/train.py</code></p>
-          </div>
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">03</div>
-
-          <div>
-            <h3>Evaluation and figures</h3>
-
-            <p>
-              Offline prediction, localization evaluation,
-              mission-level statistics, greenhouse-state analysis, and
-              publication-quality visualization.
-            </p>
-
-            <p><code>scripts/evaluate.py</code></p>
-          </div>
-        </article>
-
-        <article class="capability reveal">
-          <div class="capability-index">04</div>
-
-          <div>
-            <h3>Dataset release status</h3>
-
-            <p>
-              The dataset is stored privately on Hugging Face during
-              manuscript review and is planned for public release after
-              acceptance.
-            </p>
-
-            <p><code>dataset/README.md</code></p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- =====================================================
-         Closing
-    ====================================================== -->
-    <section class="section closing reveal">
-      <p class="kicker">AgriSense · 2026</p>
-
-      <h2>
-        A reproducible greenhouse<br>
-        autonomy research platform.
-      </h2>
-
-      <p>
-        The repository connects the project webpage, inspection
-        recordings, model implementation, training and evaluation
-        workflow, supplementary results, and dataset release plan.
-      </p>
-
-      <div class="hero-actions">
-        <a
-          class="button primary"
-          href="https://github.com/LyesSaadSaoud/AgriSense"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open GitHub repository
-        </a>
-
-        <a
-          class="button ghost"
-          href="mailto:saadsaoudl@yahoo.fr"
-        >
-          Contact
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =====================================================
-       Footer
-  ====================================================== -->
-  <footer>
-    <div class="brand">
-      <span class="brand-mark">A</span>
-      <span>AgriSense</span>
-    </div>
-
-    <p>
-      Digital-twin-driven vision-language decision-to-action framework
-      for GNSS-denied robotic greenhouse autonomy.
-    </p>
-
-    <p>© 2026 AgriSense</p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<div class="noise" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="brand" href="#top"><span class="brand-mark">A</span><span>AgriSense</span></a>
+  <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">Menu</button>
+  <nav id="siteNav">
+    <a href="#overview">Overview</a><a href="#missions">Videos</a><a href="#architecture">Architecture</a>
+    <a href="#results">Results</a><a href="#tables">Tables</a><a href="#software">Code & Data</a>
+    <a class="nav-cta" href="https://github.com/LyesSaadSaoud/AgriSense" target="_blank" rel="noreferrer">GitHub</a>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+  <img class="hero-image" src="assets/images/hero.webp" alt="AgriSense greenhouse digital twin">
+  <div class="hero-shade"></div>
+  <div class="hero-content reveal">
+    <p class="kicker">Isaac Sim · GNSS-denied navigation · Vision-language decision-to-action</p>
+    <h1>Embodied greenhouse<br><em>autonomy.</em></h1>
+    <p class="hero-copy">AgriSense connects a high-fidelity greenhouse digital twin, quadruped mobile manipulation, LiDAR–IMU spatial grounding, multimodal reasoning, and targeted plant-level action.</p>
+    <div class="hero-actions"><a class="button primary" href="#missions">Watch missions</a><a class="button ghost" href="#software">Explore code and data</a></div>
+  </div>
+</section>
+
+<section id="overview" class="section intro">
+  <div class="section-label">System overview</div>
+  <div class="intro-grid"><div class="reveal"><h2>From multimodal sensing to validated action.</h2></div><div class="intro-copy reveal"><p>The framework processes operator prompts, robot-view RGB, LiDAR, IMU, and four-zone greenhouse measurements.</p><p>Structured navigation, setpoint, inspection, and intervention proposals are checked for confidence, freshness, feasibility, localization consistency, and reachability before execution.</p></div></div>
+  <div class="figure-panel reveal"><img src="assets/images/updated/system_pipeline.png" alt="AgriSense system-level pipeline"><p>Updated AgriSense system-level pipeline.</p></div>
+</section>
+
+<section id="missions" class="section missions">
+  <div class="section-heading reveal"><div><div class="section-label">Mission recordings</div><h2>Three completed inspection runs.</h2></div><p>The videos are loaded directly from the repository. No “Coming soon” placeholders are used.</p></div>
+  <div class="video-grid">
+    <article class="mission-card reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_zone2.webp"><source src="assets/videos/inspect_zone2.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 01</span><h3>Zone 2 Inspection</h3><p>Focused Zone 2 inspection with localization and greenhouse-state monitoring.</p></div></article>
+    <article class="mission-card featured reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_allzones.webp"><source src="assets/videos/inspect_allzones.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 02</span><h3>All-Zone Inspection</h3><p>Complete traversal across all four greenhouse management zones.</p></div></article>
+    <article class="mission-card reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_zone4.webp"><source src="assets/videos/inspect_zone4.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 03</span><h3>Zone 4 Inspection</h3><p>Targeted Zone 4 mission with LiDAR–IMU feedback and environmental logging.</p></div></article>
+  </div>
+</section>
+
+<section id="architecture" class="section capabilities">
+  <div class="section-label">Architecture and embodied execution</div>
+  <div class="capability-list">
+    <article class="capability reveal"><div class="capability-index">01</div><div><h3>Digital-twin environment</h3><p>Greenhouse geometry, crop rows, aisle corridors, robot sensing, and manipulation context.</p></div><img src="assets/images/updated/full_system.png" alt="AgriSense digital twin"></article>
+    <article class="capability reveal"><div class="capability-index">02</div><div><h3>GNSS-denied spatial grounding</h3><p>LiDAR–IMU odometry, map construction, zone association, and physical consistency checking.</p></div><img src="assets/images/updated/spatial_grounding.png" alt="Spatial grounding pipeline"></article>
+    <article class="capability reveal"><div class="capability-index">03</div><div><h3>Robot-view perception</h3><p>Visual and spatial context exposed from the robot perspective.</p></div><img src="assets/images/updated/robot_perception.jpeg" alt="Robot perception overlay"></article>
+    <article class="capability reveal"><div class="capability-index">04</div><div><h3>Plant-level intervention</h3><p>Localized inspection and manipulator-based treatment following validation.</p></div><img src="assets/images/updated/plant_level.jpeg" alt="Plant-level intervention"></article>
+  </div>
+</section>
+
+<section id="results" class="section gallery">
+  <div class="section-heading reveal"><div><div class="section-label">Figures and experimental evidence</div><h2>Navigation, mapping, monitoring, and supervision.</h2></div><p>These are actual project figures from the manuscript and supplementary package, not generic replacements.</p></div>
+  <div class="results-grid reveal">
+    <figure><img src="assets/images/updated/navigation_metrics.png" alt="Navigation metrics"><figcaption>GNSS-denied navigation metrics.</figcaption></figure>
+    <figure><img src="assets/images/updated/localization_error.png" alt="Localization error"><figcaption>Localization-error evolution.</figcaption></figure>
+    <figure><img src="assets/images/updated/environmental_delta.png" alt="Environmental changes"><figcaption>Four-zone environmental changes.</figcaption></figure>
+    <figure><img src="assets/images/updated/trajectory_plot.png" alt="Trajectory alignment"><figcaption>Ground-truth and estimated trajectory alignment.</figcaption></figure>
+    <figure><img src="assets/images/updated/pointcloud_allzones.png" alt="All-zone point cloud"><figcaption>All-zone LiDAR point-cloud map.</figcaption></figure>
+    <figure><img src="assets/images/updated/pointcloud_zone2.png" alt="Zone 2 point cloud"><figcaption>Zone 2 LiDAR point-cloud map.</figcaption></figure>
+    <figure><img src="assets/images/updated/pointcloud_zone4.png" alt="Zone 4 point cloud"><figcaption>Zone 4 LiDAR point-cloud map.</figcaption></figure>
+    <figure><img src="assets/images/updated/supervision_interface.png" alt="Supervision interface"><figcaption>Remote supervision interface.</figcaption></figure>
+  </div>
+</section>
+
+<section id="tables" class="section">
+  <div class="section-label">Tables</div><h2 class="reveal">Core quantitative summaries.</h2>
+  <div class="table-image-grid reveal">
+    <figure><img src="assets/tables/navigation_metrics_table.png" alt="Navigation metrics table"><figcaption>Navigation and localization metrics for the three missions.</figcaption></figure>
+    <figure><img src="assets/tables/greenhouse_state_table.png" alt="Greenhouse state table"><figcaption>Four-zone greenhouse-state statistics.</figcaption></figure>
+  </div>
+  <div class="metric-table-wrap reveal"><table class="metric-table"><thead><tr><th>Mission</th><th>Path</th><th>Duration</th><th>XY RMSE</th><th>3D RMSE</th></tr></thead><tbody><tr><td>All-Zone</td><td>151.23 m</td><td>607.95 s</td><td>5.34 cm</td><td>5.64 cm</td></tr><tr><td>Zone 2</td><td>50.21 m</td><td>235.54 s</td><td>3.43 cm</td><td>3.69 cm</td></tr><tr><td>Zone 4</td><td>81.34 m</td><td>222.94 s</td><td>5.16 cm</td><td>5.39 cm</td></tr></tbody></table></div>
+</section>
+
+<section id="software" class="section capabilities">
+  <div class="section-label">Code, training, evaluation, and dataset</div>
+  <div class="intro-grid"><div class="reveal"><h2>A research repository, not only a webpage.</h2></div><div class="intro-copy reveal"><p>The repository package includes the actual model, dataset loader, training script, offline evaluator, augmentation utilities, configuration, and reproducibility notes under <code>code/</code>.</p><p>The associated dataset is hosted privately on Hugging Face during peer review and will be made public after acceptance.</p></div></div>
+  <div class="repo-grid reveal">
+    <a class="repo-card" href="code/src/train_greenhouse_vla_better.py"><b>Training</b><code>code/src/train_greenhouse_vla_better.py</code></a>
+    <a class="repo-card" href="code/src/greenhouse_vla_model_bert_dino_pesticide.py"><b>Multimodal model</b><code>code/src/greenhouse_vla_model_bert_dino_pesticide.py</code></a>
+    <a class="repo-card" href="code/src/greenhouse_vla_dataset_fixed.py"><b>Dataset loader</b><code>code/src/greenhouse_vla_dataset_fixed.py</code></a>
+    <a class="repo-card" href="code/src/evaluate_model_offline_fixed.py"><b>Evaluation</b><code>code/src/evaluate_model_offline_fixed.py</code></a>
+    <a class="repo-card" href="code/src/augment_strawberry_disease_dataset.py"><b>Augmentation</b><code>code/src/augment_strawberry_disease_dataset.py</code></a>
+    <a class="repo-card" href="code/docs/REPRODUCIBILITY.md"><b>Reproducibility</b><code>code/docs/REPRODUCIBILITY.md</code></a>
+  </div>
+</section>
+
+<section class="section closing reveal"><p class="kicker">AgriSense · 2026</p><h2>Digital twin, videos, figures, tables, and code in one project page.</h2><p>The public site presents the completed missions and current reproducibility resources. Dataset access remains private during review.</p><div class="hero-actions"><a class="button primary" href="https://github.com/LyesSaadSaoud/AgriSense" target="_blank">Open repository</a><a class="button ghost" href="mailto:saadsaoudl@yahoo.fr">Contact</a></div></section>
+</main>
+<footer><div class="brand"><span class="brand-mark">A</span><span>AgriSense</span></div><p>Digital-twin-driven VLA framework for GNSS-denied robotic greenhouse autonomy.</p><p>© 2026 AgriSense</p></footer>
+<script src="assets/js/main.js"></script>
+</body></html>
