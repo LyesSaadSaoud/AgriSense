@@ -18,7 +18,7 @@
   <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">Menu</button>
   <nav id="siteNav">
     <a href="#overview">Overview</a><a href="#missions">Videos</a><a href="#architecture">Architecture</a>
-    <a href="#results">Results</a><a href="#tables">Tables</a><a href="#software">Code & Data</a>
+    <a href="#results">Results</a><a href="#app">Mobile App</a><a href="#tables">Tables</a><a href="#software">Code & Data</a>
     <a class="nav-cta" href="https://github.com/LyesSaadSaoud/AgriSense" target="_blank" rel="noreferrer">GitHub</a>
   </nav>
 </header>
@@ -43,9 +43,9 @@
 <section id="missions" class="section missions">
   <div class="section-heading reveal"><div><div class="section-label">Mission recordings</div><h2>Three completed inspection runs.</h2></div><p>The three completed missions play automatically without audio. Use the controls to pause, seek, enter full screen, or enable sound.</p></div>
   <div class="video-grid">
-    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone2.webp" aria-label="Zone 2 inspection mission"><source src="assets/videos/inspect_zone2.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 01</span><h3>Zone 2 Inspection</h3><p>Focused Zone 2 inspection with localization and greenhouse-state monitoring.</p></div></article>
-    <article class="mission-card featured reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_allzones.webp" aria-label="All-Zone inspection mission"><source src="assets/videos/inspect_allzones.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 02</span><h3>All-Zone Inspection</h3><p>Complete traversal across all four greenhouse management zones.</p></div></article>
-    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone4.webp" aria-label="Zone 4 inspection mission"><source src="assets/videos/inspect_zone4.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 03</span><h3>Zone 4 Inspection</h3><p>Targeted Zone 4 mission with LiDAR–IMU feedback and environmental logging.</p></div></article>
+    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video autoplay-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone2.webp" aria-label="Zone 2 inspection mission"><source src="assets/videos/inspect_zone2.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 01</span><h3>Zone 2 Inspection</h3><p>Focused Zone 2 inspection with localization and greenhouse-state monitoring.</p></div></article>
+    <article class="mission-card featured reveal"><div class="video-shell"><video class="mission-video autoplay-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_allzones.webp" aria-label="All-Zone inspection mission"><source src="assets/videos/inspect_allzones.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 02</span><h3>All-Zone Inspection</h3><p>Complete traversal across all four greenhouse management zones.</p></div></article>
+    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video autoplay-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone4.webp" aria-label="Zone 4 inspection mission"><source src="assets/videos/inspect_zone4.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 03</span><h3>Zone 4 Inspection</h3><p>Targeted Zone 4 mission with LiDAR–IMU feedback and environmental logging.</p></div></article>
   </div>
 </section>
 
@@ -60,7 +60,7 @@
 </section>
 
 <section id="results" class="section results-section">
-  <div class="section-heading reveal"><div><div class="section-label">Figures and experimental evidence</div><h2>Navigation, mapping, monitoring, and supervision.</h2></div><p>Updated experimental figures from the manuscript and supplementary package. Select any figure to open it at full resolution.</p></div>
+  <div class="section-heading reveal"><div><div class="section-label">Figures and experimental evidence</div><h2>Navigation, mapping, and greenhouse monitoring.</h2></div><p>Updated experimental figures from the manuscript and supplementary package. Select any figure to open it at full resolution. The mobile supervision application is presented separately below as a complete video walkthrough.</p></div>
   <div class="results-grid reveal">
     <figure><a class="figure-link" href="assets/images/updated/navigation_metrics.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/navigation_metrics.png" alt="Navigation metrics"></a><figcaption>GNSS-denied navigation metrics.</figcaption></figure>
     <figure><a class="figure-link" href="assets/images/updated/localization_error.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/localization_error.png" alt="Localization error"></a><figcaption>Localization-error evolution.</figcaption></figure>
@@ -69,7 +69,37 @@
     <figure><a class="figure-link" href="assets/images/updated/pointcloud_allzones.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_allzones.png" alt="All-zone point cloud"></a><figcaption>All-zone LiDAR point-cloud map.</figcaption></figure>
     <figure><a class="figure-link" href="assets/images/updated/pointcloud_zone2.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_zone2.png" alt="Zone 2 point cloud"></a><figcaption>Zone 2 LiDAR point-cloud map.</figcaption></figure>
     <figure><a class="figure-link" href="assets/images/updated/pointcloud_zone4.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_zone4.png" alt="Zone 4 point cloud"></a><figcaption>Zone 4 LiDAR point-cloud map.</figcaption></figure>
-    <figure><a class="figure-link" href="assets/images/updated/supervision_interface.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/supervision_interface.png" alt="Supervision interface"></a><figcaption>Remote supervision interface.</figcaption></figure>
+  </div>
+</section>
+
+<section id="app" class="section app-section">
+  <div class="section-heading reveal">
+    <div>
+      <div class="section-label">Mobile supervision application</div>
+      <h2>Follow the complete workflow from a mobile interface.</h2>
+    </div>
+    <p>The application video demonstrates the main supervision steps and features, including mission selection, greenhouse-state review, robot status, task progress, and operator-facing monitoring.</p>
+  </div>
+
+  <div class="app-showcase reveal">
+    <div class="phone-frame" aria-label="AgriSense mobile application demonstration">
+      <div class="phone-speaker" aria-hidden="true"></div>
+      <video class="autoplay-video app-video" autoplay muted loop controls preload="metadata" playsinline>
+        <source src="assets/videos/App.mp4" type="video/mp4">
+        Your browser does not support MP4 video playback.
+      </video>
+    </div>
+    <div class="app-copy">
+      <span class="app-tag">Complete app walkthrough</span>
+      <h3>Remote monitoring designed for mobile use</h3>
+      <p>The demonstration presents the real application workflow rather than a static interface screenshot. It shows how an operator can inspect greenhouse conditions, follow autonomous missions, review robot and localization information, and observe task execution from a mobile-style interface.</p>
+      <div class="app-points">
+        <span>Mission selection and progress</span>
+        <span>Four-zone environmental status</span>
+        <span>Robot and localization feedback</span>
+        <span>Operator-facing supervision</span>
+      </div>
+    </div>
   </div>
 </section>
 

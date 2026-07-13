@@ -7,7 +7,7 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // Muted autoplay is permitted by modern browsers. Start videos when they enter
 // the viewport and pause them when they leave to avoid wasting bandwidth/CPU.
-const missionVideos = document.querySelectorAll('.mission-video');
+const missionVideos = document.querySelectorAll('.autoplay-video');
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const video = entry.target;

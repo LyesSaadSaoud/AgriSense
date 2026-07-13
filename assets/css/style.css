@@ -92,3 +92,108 @@
   .results-grid{grid-template-columns:1fr}
   .mission-meta h3{font-size:27px}
 }
+
+
+/* ==========================================================
+   Mobile supervision application video
+   ========================================================== */
+.app-section{
+  max-width:none;
+  background:linear-gradient(180deg,#eef5ef 0%,#f8fbf8 100%);
+  color:#102018;
+  padding-left:max(34px,calc((100vw - var(--max))/2 + 34px));
+  padding-right:max(34px,calc((100vw - var(--max))/2 + 34px));
+}
+.app-section .section-label{color:#27734d}
+.app-section .section-heading>p{color:#52645a}
+.app-section h2{color:#102018}
+.app-showcase{
+  display:grid;
+  grid-template-columns:minmax(320px,.72fr) minmax(360px,1fr);
+  align-items:center;
+  gap:clamp(46px,7vw,110px);
+  max-width:1080px;
+  margin:54px auto 0;
+}
+.phone-frame{
+  position:relative;
+  width:min(100%,430px);
+  margin:auto;
+  padding:16px;
+  border-radius:54px;
+  background:#07110c;
+  border:2px solid rgba(255,255,255,.18);
+  box-shadow:0 36px 80px rgba(17,49,32,.24),inset 0 0 0 2px rgba(255,255,255,.05);
+}
+.phone-frame::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:46px;
+  pointer-events:none;
+  z-index:2;
+}
+.phone-speaker{
+  position:absolute;
+  z-index:3;
+  top:24px;
+  left:50%;
+  transform:translateX(-50%);
+  width:92px;
+  height:7px;
+  border-radius:999px;
+  background:rgba(0,0,0,.75);
+  box-shadow:0 0 0 1px rgba(255,255,255,.08);
+}
+.app-video{
+  width:100%;
+  aspect-ratio:9/16;
+  max-height:760px;
+  object-fit:contain;
+  border-radius:40px;
+  background:#000;
+}
+.app-copy h3{
+  margin:14px 0 18px;
+  font-size:clamp(32px,4vw,54px);
+  line-height:1.05;
+  letter-spacing:-.045em;
+}
+.app-copy p{color:#52645a;font-size:18px;max-width:650px}
+.app-tag{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#dff2e5;
+  color:#17643f;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.app-points{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:28px;
+}
+.app-points span{
+  padding:14px 16px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid rgba(20,70,43,.12);
+  box-shadow:0 8px 22px rgba(22,65,39,.07);
+  color:#203a2c;
+  font-weight:700;
+}
+@media(max-width:900px){
+  .app-showcase{grid-template-columns:1fr;gap:40px}
+  .phone-frame{width:min(86vw,410px)}
+}
+@media(max-width:560px){
+  .app-points{grid-template-columns:1fr}
+  .phone-frame{padding:12px;border-radius:42px}
+  .app-video{border-radius:32px}
+  .phone-speaker{top:20px}
+}
