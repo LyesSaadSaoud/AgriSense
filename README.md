@@ -1,28 +1,104 @@
-# AgriSense project website
+# AgriSense
 
-This ZIP is the complete GitHub Pages website package for:
+## A Digital-Twin-Driven VLA Framework for GNSS-Denied Robotic Greenhouse Autonomy
 
-https://github.com/LyesSaadSaoud/AgriSense
+[![Project Website](https://img.shields.io/badge/Project-Website-green)](https://lyessaadsaoud.github.io/AgriSense/)
+[![Repository](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/LyesSaadSaoud/AgriSense)
+[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](#dataset)
+[![Status](https://img.shields.io/badge/Status-Under%20Review-orange)](#release-status)
 
-## Upload
+AgriSense is a digital-twin-driven robotic greenhouse autonomy
+framework integrating:
 
-1. Extract this ZIP.
-2. Copy all files and folders into the root of the `AgriSense` repository.
-3. Add the three real MP4 files to `assets/videos/` using the exact filenames listed in `assets/videos/README.md`.
-4. Commit and push:
+- NVIDIA Isaac Sim greenhouse simulation
+- Quadruped mobile manipulation
+- RGB, LiDAR, IMU, and environmental sensing
+- GNSS-denied LiDAR–inertial localization
+- Vision-language decision-to-action reasoning
+- Zone-level environmental monitoring
+- Plant-level inspection and targeted intervention
+- Safety-constrained command validation
 
-```bash
-git add .
-git commit -m "Add complete AgriSense project website"
-git push origin main
-```
+## Project website
 
-5. In GitHub: **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
-
-The public URL will be:
+The interactive project website is available at:
 
 https://lyessaadsaoud.github.io/AgriSense/
 
-## Design intent
+It includes the three recorded inspection missions:
 
-This page is media-first. It does not duplicate manuscript sections, tables, or references. It presents the project through mission videos, environment imagery, capabilities, and system experience. Detailed technical material remains in the manuscript and repository.
+- All-Zone inspection
+- Zone 2 inspection
+- Zone 4 inspection
+
+## System overview
+
+<p align="center">
+  <img
+    src="assets/images/system_pipeline.png"
+    width="100%"
+    alt="AgriSense system pipeline"
+  >
+</p>
+
+The framework receives user instructions, robot-view RGB images,
+LiDAR observations, IMU measurements, greenhouse sensor states, and
+robot spatial context. The multimodal decision module produces
+structured navigation, environmental-control, and plant-level
+intervention proposals.
+
+All proposals are checked for confidence, freshness, feasibility,
+localization consistency, safety, and manipulator reachability before
+execution.
+
+## Repository structure
+
+```text
+AgriSense/
+├── assets/
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   └── videos/
+│
+├── configs/
+│   ├── training.yaml
+│   ├── evaluation.yaml
+│   └── dataset.yaml
+│
+├── dataset/
+│   ├── README.md
+│   ├── examples/
+│   └── metadata/
+│
+├── scripts/
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── infer.py
+│   ├── generate_figures.py
+│   └── evaluate_localization.py
+│
+├── src/
+│   └── agrisense/
+│       ├── data/
+│       ├── models/
+│       ├── training/
+│       ├── evaluation/
+│       ├── localization/
+│       ├── control/
+│       └── utils/
+│
+├── checkpoints/
+│   └── README.md
+│
+├── supplementary/
+│   ├── figures/
+│   ├── tables/
+│   └── dashboards/
+│
+├── index.html
+├── requirements.txt
+├── environment.yml
+├── CITATION.cff
+├── LICENSE
+└── README.md
