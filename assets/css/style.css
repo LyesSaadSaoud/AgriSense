@@ -197,3 +197,73 @@
   .app-video{border-radius:32px}
   .phone-speaker{top:20px}
 }
+
+/* ==========================================================
+   Final sizing refinements: larger mission videos, smaller app video
+   ========================================================== */
+.video-grid{
+  max-width:1380px;
+  gap:52px;
+}
+.mission-card,
+.mission-card.featured{
+  grid-template-columns:1fr;
+}
+.video-shell{
+  min-height:0;
+  aspect-ratio:16/9;
+}
+.video-shell video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.mission-meta{
+  padding:28px 34px 32px;
+}
+.mission-meta h3{
+  font-size:34px;
+}
+.mission-meta p{
+  max-width:900px;
+}
+
+.app-showcase{
+  grid-template-columns:minmax(260px,.48fr) minmax(420px,1fr);
+  max-width:980px;
+  gap:clamp(38px,6vw,82px);
+}
+.phone-frame{
+  width:min(100%,310px);
+  padding:12px;
+  border-radius:42px;
+}
+.phone-frame::before{
+  inset:6px;
+  border-radius:35px;
+}
+.phone-speaker{
+  top:18px;
+  width:72px;
+  height:6px;
+}
+.app-video{
+  max-height:540px;
+  border-radius:31px;
+}
+
+@media(max-width:900px){
+  .video-grid{max-width:100%}
+  .mission-meta{padding:24px 24px 28px}
+  .mission-meta h3{font-size:29px}
+  .app-showcase{grid-template-columns:1fr;max-width:760px}
+  .phone-frame{width:min(72vw,300px)}
+}
+
+@media(max-width:560px){
+  .video-grid{gap:30px}
+  .mission-meta h3{font-size:26px}
+  .phone-frame{width:min(78vw,270px);padding:10px;border-radius:36px}
+  .phone-frame::before{border-radius:30px}
+  .app-video{max-height:470px;border-radius:27px}
+}
