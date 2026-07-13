@@ -41,11 +41,11 @@
 </section>
 
 <section id="missions" class="section missions">
-  <div class="section-heading reveal"><div><div class="section-label">Mission recordings</div><h2>Three completed inspection runs.</h2></div><p>The videos are loaded directly from the repository. No “Coming soon” placeholders are used.</p></div>
+  <div class="section-heading reveal"><div><div class="section-label">Mission recordings</div><h2>Three completed inspection runs.</h2></div><p>The three completed missions play automatically without audio. Use the controls to pause, seek, enter full screen, or enable sound.</p></div>
   <div class="video-grid">
-    <article class="mission-card reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_zone2.webp"><source src="assets/videos/inspect_zone2.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 01</span><h3>Zone 2 Inspection</h3><p>Focused Zone 2 inspection with localization and greenhouse-state monitoring.</p></div></article>
-    <article class="mission-card featured reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_allzones.webp"><source src="assets/videos/inspect_allzones.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 02</span><h3>All-Zone Inspection</h3><p>Complete traversal across all four greenhouse management zones.</p></div></article>
-    <article class="mission-card reveal"><div class="video-shell"><video controls preload="metadata" playsinline poster="assets/images/poster_zone4.webp"><source src="assets/videos/inspect_zone4.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 03</span><h3>Zone 4 Inspection</h3><p>Targeted Zone 4 mission with LiDAR–IMU feedback and environmental logging.</p></div></article>
+    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone2.webp" aria-label="Zone 2 inspection mission"><source src="assets/videos/inspect_zone2.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 01</span><h3>Zone 2 Inspection</h3><p>Focused Zone 2 inspection with localization and greenhouse-state monitoring.</p></div></article>
+    <article class="mission-card featured reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_allzones.webp" aria-label="All-Zone inspection mission"><source src="assets/videos/inspect_allzones.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 02</span><h3>All-Zone Inspection</h3><p>Complete traversal across all four greenhouse management zones.</p></div></article>
+    <article class="mission-card reveal"><div class="video-shell"><video class="mission-video" autoplay muted loop controls preload="metadata" playsinline poster="assets/images/poster_zone4.webp" aria-label="Zone 4 inspection mission"><source src="assets/videos/inspect_zone4.webm" type="video/webm"></video></div><div class="mission-meta"><span>Mission 03</span><h3>Zone 4 Inspection</h3><p>Targeted Zone 4 mission with LiDAR–IMU feedback and environmental logging.</p></div></article>
   </div>
 </section>
 
@@ -59,17 +59,17 @@
   </div>
 </section>
 
-<section id="results" class="section gallery">
-  <div class="section-heading reveal"><div><div class="section-label">Figures and experimental evidence</div><h2>Navigation, mapping, monitoring, and supervision.</h2></div><p>These are actual project figures from the manuscript and supplementary package, not generic replacements.</p></div>
+<section id="results" class="section results-section">
+  <div class="section-heading reveal"><div><div class="section-label">Figures and experimental evidence</div><h2>Navigation, mapping, monitoring, and supervision.</h2></div><p>Updated experimental figures from the manuscript and supplementary package. Select any figure to open it at full resolution.</p></div>
   <div class="results-grid reveal">
-    <figure><img src="assets/images/updated/navigation_metrics.png" alt="Navigation metrics"><figcaption>GNSS-denied navigation metrics.</figcaption></figure>
-    <figure><img src="assets/images/updated/localization_error.png" alt="Localization error"><figcaption>Localization-error evolution.</figcaption></figure>
-    <figure><img src="assets/images/updated/environmental_delta.png" alt="Environmental changes"><figcaption>Four-zone environmental changes.</figcaption></figure>
-    <figure><img src="assets/images/updated/trajectory_plot.png" alt="Trajectory alignment"><figcaption>Ground-truth and estimated trajectory alignment.</figcaption></figure>
-    <figure><img src="assets/images/updated/pointcloud_allzones.png" alt="All-zone point cloud"><figcaption>All-zone LiDAR point-cloud map.</figcaption></figure>
-    <figure><img src="assets/images/updated/pointcloud_zone2.png" alt="Zone 2 point cloud"><figcaption>Zone 2 LiDAR point-cloud map.</figcaption></figure>
-    <figure><img src="assets/images/updated/pointcloud_zone4.png" alt="Zone 4 point cloud"><figcaption>Zone 4 LiDAR point-cloud map.</figcaption></figure>
-    <figure><img src="assets/images/updated/supervision_interface.png" alt="Supervision interface"><figcaption>Remote supervision interface.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/navigation_metrics.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/navigation_metrics.png" alt="Navigation metrics"></a><figcaption>GNSS-denied navigation metrics.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/localization_error.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/localization_error.png" alt="Localization error"></a><figcaption>Localization-error evolution.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/environmental_delta.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/environmental_delta.png" alt="Environmental changes"></a><figcaption>Four-zone environmental changes.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/trajectory_plot.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/trajectory_plot.png" alt="Trajectory alignment"></a><figcaption>Ground-truth and estimated trajectory alignment.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/pointcloud_allzones.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_allzones.png" alt="All-zone point cloud"></a><figcaption>All-zone LiDAR point-cloud map.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/pointcloud_zone2.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_zone2.png" alt="Zone 2 point cloud"></a><figcaption>Zone 2 LiDAR point-cloud map.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/pointcloud_zone4.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/pointcloud_zone4.png" alt="Zone 4 point cloud"></a><figcaption>Zone 4 LiDAR point-cloud map.</figcaption></figure>
+    <figure><a class="figure-link" href="assets/images/updated/supervision_interface.png" target="_blank" rel="noreferrer"><img loading="lazy" src="assets/images/updated/supervision_interface.png" alt="Supervision interface"></a><figcaption>Remote supervision interface.</figcaption></figure>
   </div>
 </section>
 
